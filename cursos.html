@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cursos y talleres de Factos Solutions para aplicar IA y automatizacion en contextos profesionales.">
+  <title>Factos Academia | Cursos y Talleres</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+  <style>
+    .academy-hero {
+      color: #fff;
+      background:
+        radial-gradient(circle at 80% 18%, rgba(42, 136, 199, .3), transparent 28%),
+        radial-gradient(circle at 18% 78%, rgba(245, 104, 45, .22), transparent 30%),
+        linear-gradient(135deg, #06111f 0%, #0c2741 58%, #081b2f 100%);
+    }
+    .academy-hero p {
+      max-width: 760px;
+      color: #d6e2ee;
+      line-height: 1.55;
+      font-size: 18px;
+      margin: 20px 0 0;
+    }
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .course-card {
+      border-radius: 16px;
+      border: 1px solid #dbe5ef;
+      background: #fff;
+      box-shadow: 0 18px 45px rgba(16, 36, 58, .08);
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+    .course-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #eaf1f8;
+    }
+    .course-body {
+      padding: 18px 18px 20px;
+      display: grid;
+      gap: 12px;
+    }
+    .course-body h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.15;
+    }
+    .course-meta {
+      color: #4b6078;
+      line-height: 1.45;
+      font-size: 15px;
+    }
+    .course-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .upcoming-card {
+      border-radius: 16px;
+      border: 1px dashed #2a88c7;
+      background: #f8fbff;
+      padding: 20px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+    .upcoming-card h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .upcoming-card p {
+      margin: 0;
+      color: #39506a;
+      line-height: 1.5;
+    }
+    .back-link {
+      margin-top: 24px;
+      display: inline-flex;
+      color: #2a88c7;
+      font-weight: 800;
+    }
+    .back-link:hover { color: #17608f; }
+    @media (max-width: 980px) {
+      .course-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" data-reveal>
+    <a class="brand" href="index.html#inicio" aria-label="Factos Solutions inicio">
+      <img src="assets/logo.png" alt="Factos Solutions">
+    </a>
+    <nav class="nav-links" aria-label="Navegacion principal">
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#procesos">Procesos</a>
+      <a href="index.html#academia">Academia</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <a class="nav-action" href="index.html#diagnostico">Diagnostico</a>
+  </header>
+
+  <main>
+    <section class="section academy-hero">
+      <p class="eyebrow">Factos Academia</p>
+      <h1>Cursos y talleres en IA aplicada</h1>
+      <p>Espacio para formaciones practicas orientadas a empresarios, profesionales y docentes. Ya tenemos un curso disponible y abriremos un nuevo taller el proximo mes.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Disponible ahora</p>
+        <h2>Curso actual</h2>
+      </div>
+      <div class="course-grid">
+        <article class="course-card" data-reveal>
+          <img src="assets/flyer-ia-docentes.jpeg" alt="Flyer del curso IA para docentes universitarios">
+          <div class="course-body">
+            <h3>IA para Docentes Universitarios</h3>
+            <p class="course-meta">Modalidad online, herramientas practicas con ChatGPT, NotebookLM y Claude para el trabajo docente.</p>
+            <div class="course-actions">
+              <a class="button button-primary" href="https://wa.me/51918395774?text=Hola%20Factos%20Solutions%2C%20quiero%20inscribirme%20al%20curso%20IA%20para%20Docentes%20Universitarios." target="_blank" rel="noopener">Inscribirme por WhatsApp</a>
+            </div>
+          </div>
+        </article>
+        <article class="upcoming-card" data-reveal>
+          <p class="eyebrow">Proximo lanzamiento</p>
+          <h3>Taller abierto - Mayo 2026</h3>
+          <p>Abriremos un nuevo taller el otro mes con enfoque practico para aplicar IA en procesos reales de trabajo.</p>
+          <p>Muy pronto publicaremos temario, horarios y precio final en esta misma pagina.</p>
+          <div class="course-actions">
+            <a class="button button-secondary" href="https://wa.me/51918395774?text=Hola%20Factos%20Solutions%2C%20quiero%20separar%20mi%20cupo%20para%20el%20proximo%20taller%20de%20mayo%202026." target="_blank" rel="noopener">Quiero separar cupo</a>
+          </div>
+        </article>
+      </div>
+      <a class="back-link" href="index.html#academia">Volver a la web principal</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Factos Solutions</span>
+      <span>Consultoria en automatizacion e IA</span>
+    </div>
+  </footer>
+
+  <script src="src/main.js"></script>
+</body>
+</html>
