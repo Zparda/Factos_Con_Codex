@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mockups Factos Solutions</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #eef2f7;
+      color: #0f172a;
+    }
+    main { max-width: 1240px; margin: 0 auto; padding: 32px 22px 48px; }
+    h1 { margin: 0; font-size: 34px; line-height: 1.05; }
+    .intro { margin: 10px 0 26px; color: #475569; max-width: 760px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .card { background: white; border: 1px solid #dbe3ef; border-radius: 8px; overflow: hidden; box-shadow: 0 18px 50px rgba(15, 23, 42, .08); }
+    .body { padding: 18px; }
+    .body h2 { margin: 0 0 8px; font-size: 18px; }
+    .body p { margin: 0; color: #475569; font-size: 14px; line-height: 1.45; }
+    .mock { height: 620px; position: relative; overflow: hidden; }
+    .nav { position: absolute; left: 24px; right: 24px; top: 18px; height: 42px; display: flex; align-items: center; justify-content: space-between; }
+    .pill { border-radius: 999px; }
+    .btn { height: 34px; width: 126px; border-radius: 999px; }
+    .line { height: 8px; border-radius: 999px; background: currentColor; opacity: .55; }
+    .a { background: #06111f; color: white; }
+    .a::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 86% 18%, rgba(0,229,255,.28), transparent 28%), radial-gradient(circle at 18% 82%, rgba(255,61,242,.2), transparent 30%); }
+    .hero-a { position: absolute; left: 30px; top: 94px; width: 56%; }
+    .eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #67e8f9; font-weight: 800; }
+    .title { font-size: 38px; font-weight: 900; line-height: 1.02; margin-top: 12px; }
+    .copy { font-size: 13px; line-height: 1.5; color: #cbd5e1; margin-top: 14px; }
+    .orb { position: absolute; right: 36px; top: 116px; width: 156px; height: 156px; border-radius: 28px; background: linear-gradient(135deg, rgba(34,211,238,.38), rgba(255,61,242,.24)); border: 1px solid rgba(255,255,255,.18); transform: rotate(12deg); }
+    .service-row { position: absolute; left: 24px; right: 24px; bottom: 102px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .mini { height: 82px; border-radius: 12px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); padding: 12px; }
+    .bottom-bar { position: absolute; left: 24px; right: 24px; bottom: 24px; height: 52px; border-radius: 14px; background: white; color: #0f172a; display: flex; align-items: center; justify-content: space-around; font-size: 11px; font-weight: 800; }
+    .b { background: #f8fafc; color: #0f172a; }
+    .hero-b { position: absolute; left: 30px; right: 30px; top: 88px; }
+    .tag { display: inline-block; background: #dbeafe; color: #1d4ed8; font-size: 11px; font-weight: 900; border-radius: 999px; padding: 8px 12px; }
+    .copy-b { font-size: 13px; line-height: 1.5; color: #475569; margin-top: 12px; max-width: 370px; }
+    .float-card { position: absolute; right: 34px; top: 242px; width: 160px; height: 126px; border-radius: 22px; background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 18px 45px rgba(15,23,42,.08); padding: 16px; }
+    .diag { position: absolute; left: 24px; right: 24px; bottom: 24px; height: 110px; border-radius: 16px; background: #0f172a; color: white; padding: 20px; }
+    .c { background: linear-gradient(135deg, #111827 0%, #172554 60%, #0f172a 100%); color: white; }
+    .hero-c { position: absolute; left: 30px; top: 98px; width: 46%; }
+    .dashboard { position: absolute; right: 24px; top: 94px; width: 184px; height: 246px; border-radius: 18px; background: #f8fafc; color: #0f172a; padding: 15px; box-shadow: 0 25px 70px rgba(0,0,0,.35); }
+    .steps { position: absolute; left: 24px; right: 24px; bottom: 134px; height: 78px; border-radius: 16px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); display: flex; align-items: center; justify-content: space-around; text-align: center; }
+    @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } .mock { height: 560px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mockups de homepage para Factos Solutions</h1>
+    <p class="intro">Tres direcciones visuales para una web de consultoria en automatizacion e IA para procesos empresariales. La estructura mantiene servicios primero y diagnostico despues.</p>
+    <section class="grid">
+      <article class="card">
+        <div class="mock a">
+          <div class="nav"><strong>Factos<span style="color:#22d3ee">.</span></strong><span style="font-size:11px;color:#cbd5e1">Servicios &nbsp; Casos &nbsp; Academia &nbsp; Contacto</span></div>
+          <div class="hero-a"><div class="eyebrow">Consultoria en automatizacion + IA</div><div class="title">Procesos empresariales mas inteligentes</div><div class="copy">Detectamos tareas manuales, ordenamos tus flujos y aplicamos automatizacion e IA donde realmente genera impacto.</div><div style="display:flex;gap:10px;margin-top:20px"><div class="btn" style="background:#22d3ee"></div><div class="btn" style="border:1px solid rgba(255,255,255,.25);width:96px"></div></div></div>
+          <div class="orb"></div>
+          <div class="service-row"><div class="mini"><div class="line" style="width:62%;color:#22d3ee"></div></div><div class="mini"><div class="line" style="width:68%;color:#ff3df2"></div></div><div class="mini"><div class="line" style="width:56%;color:#00f0a8"></div></div></div>
+          <div class="bottom-bar"><span>Problemas</span><span>Servicios</span><span>Diagnostico S/150</span><span>Academia</span></div>
+        </div>
+        <div class="body"><h2>A. Ejecutivo oscuro</h2><p>Mas premium, corporativo y tecnologico. Mi favorito para transmitir consultoria seria y moderna.</p></div>
+      </article>
+      <article class="card">
+        <div class="mock b">
+          <div class="nav"><strong>Factos <span style="color:#2563eb">Solutions</span></strong><div class="btn" style="background:#0f172a;width:112px"></div></div>
+          <div class="hero-b"><span class="tag">Automatizacion e IA explicada simple</span><div class="title" style="color:#0f172a;max-width:390px">Convierte tareas repetitivas en sistemas que trabajan por tu empresa</div><div class="copy-b">Te guiamos paso a paso: diagnostico, oportunidades, automatizacion y adopcion de IA sin complicarte con tecnicismos.</div></div>
+          <div class="float-card"><div class="line" style="width:72%;color:#22d3ee"></div><div class="line" style="width:94%;color:#cbd5e1;margin-top:18px"></div><div class="line" style="width:70%;color:#cbd5e1;margin-top:10px"></div><div class="btn" style="background:#ff3df2;width:86px;margin-top:18px"></div></div>
+          <div class="diag"><div class="eyebrow">Proximo paso</div><div style="font-size:25px;font-weight:900;margin-top:8px">Diagnostico de procesos</div></div>
+        </div>
+        <div class="body"><h2>B. Educativo claro</h2><p>Mas cercano y pedagogico. Bueno si la Academia sera una parte visible de la marca desde temprano.</p></div>
+      </article>
+      <article class="card">
+        <div class="mock c">
+          <div class="nav"><strong>Factos AI Ops</strong><span><i class="pill" style="display:inline-block;width:30px;height:30px;background:#22d3ee"></i> <i class="pill" style="display:inline-block;width:30px;height:30px;background:#ff3df2"></i></span></div>
+          <div class="hero-c"><div class="title">Diagnostica, automatiza y mide</div><div class="copy">Consultoria para encontrar oportunidades de automatizacion e IA en ventas, operaciones y administracion.</div></div>
+          <div class="dashboard"><strong style="font-size:11px">Mapa de procesos</strong><div style="height:40px;border-radius:12px;background:#dbeafe;margin-top:16px"></div><div style="height:40px;border-radius:12px;background:#cffafe;margin-top:10px"></div><div style="height:40px;border-radius:12px;background:#fce7f3;margin-top:10px"></div><div style="height:44px;border-radius:14px;background:#0f172a;margin-top:16px"></div></div>
+          <div class="steps"><div><b style="font-size:24px;color:#22d3ee">01</b><br><small>Diagnostico</small></div><div><b style="font-size:24px;color:#ff3df2">02</b><br><small>Roadmap</small></div><div><b style="font-size:24px;color:#00f0a8">03</b><br><small>Implementacion</small></div></div>
+          <div class="bottom-bar"><span>Servicios</span><span>Academia</span></div>
+        </div>
+        <div class="body"><h2>C. Dashboard consultivo</h2><p>Muy orientado a procesos, medicion y roadmap. Se siente como una herramienta estrategica.</p></div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

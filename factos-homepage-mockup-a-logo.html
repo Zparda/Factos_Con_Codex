@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mockup A - Factos Solutions</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f6fb;
+      color: #10243a;
+    }
+    main {
+      min-height: 100vh;
+      padding: 28px;
+      display: grid;
+      place-items: center;
+    }
+    .page {
+      width: min(1180px, 100%);
+      min-height: 760px;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      background: #081b2f;
+      color: white;
+      box-shadow: 0 30px 90px rgba(8, 27, 47, .25);
+    }
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 80% 18%, rgba(42, 136, 199, .32), transparent 30%),
+        radial-gradient(circle at 18% 82%, rgba(245, 104, 45, .24), transparent 28%),
+        linear-gradient(135deg, #07172a 0%, #0c2741 58%, #081b2f 100%);
+    }
+    .nav {
+      position: relative;
+      z-index: 2;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 44px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      background: rgba(8, 27, 47, .45);
+      backdrop-filter: blur(14px);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+    .logo img {
+      width: 168px;
+      height: auto;
+      padding: 7px 10px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.96);
+    }
+    .links {
+      display: flex;
+      gap: 24px;
+      color: #d8e7f7;
+      font-size: 14px;
+      align-items: center;
+    }
+    .nav-cta {
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 0 18px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: rgba(255,255,255,.08);
+      font-weight: 700;
+    }
+    .hero {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.06fr .94fr;
+      gap: 34px;
+      padding: 76px 44px 36px;
+      min-height: 492px;
+    }
+    .eyebrow {
+      color: #63b3e6;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .1em;
+    }
+    h1 {
+      margin: 16px 0 0;
+      max-width: 620px;
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: .96;
+      letter-spacing: 0;
+    }
+    .hero p {
+      max-width: 590px;
+      color: #d6e2ee;
+      font-size: 18px;
+      line-height: 1.56;
+      margin: 22px 0 0;
+    }
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .primary, .secondary {
+      height: 48px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 22px;
+      font-weight: 900;
+      font-size: 15px;
+    }
+    .primary {
+      background: #f5682d;
+      color: white;
+      box-shadow: 0 18px 45px rgba(245, 104, 45, .3);
+    }
+    .secondary {
+      border: 1px solid rgba(255,255,255,.22);
+      color: #eaf4ff;
+      background: rgba(255,255,255,.07);
+    }
+    .visual {
+      position: relative;
+      min-height: 360px;
+    }
+    .cube {
+      position: absolute;
+      right: 46px;
+      top: 22px;
+      width: 240px;
+      height: 240px;
+      border-radius: 42px;
+      background: linear-gradient(135deg, rgba(42,136,199,.5), rgba(255,255,255,.08));
+      border: 1px solid rgba(255,255,255,.18);
+      transform: rotate(12deg);
+      box-shadow: 0 34px 90px rgba(42, 136, 199, .26);
+    }
+    .cube::after {
+      content: "";
+      position: absolute;
+      inset: 34px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(8px);
+    }
+    .node {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #f5682d;
+      box-shadow: 0 0 0 8px rgba(245,104,45,.12);
+    }
+    .n1 { right: 328px; top: 108px; }
+    .n2 { right: 218px; top: 212px; background: #63b3e6; box-shadow: 0 0 0 8px rgba(99,179,230,.12); }
+    .n3 { right: 110px; top: 78px; }
+    .path {
+      position: absolute;
+      right: 98px;
+      top: 94px;
+      width: 254px;
+      height: 176px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-left: 0;
+      border-bottom: 0;
+      border-radius: 0 42px 0 0;
+      transform: rotate(2deg);
+    }
+    .diagnostic {
+      position: absolute;
+      right: 4px;
+      bottom: 18px;
+      width: 300px;
+      border-radius: 16px;
+      padding: 18px;
+      background: rgba(255,255,255,.94);
+      color: #10243a;
+      box-shadow: 0 24px 70px rgba(0,0,0,.22);
+    }
+    .diagnostic small {
+      color: #f5682d;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .diagnostic strong {
+      display: block;
+      margin-top: 7px;
+      font-size: 22px;
+      line-height: 1.08;
+    }
+    .services {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 0 44px 44px;
+    }
+    .service {
+      min-height: 138px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 18px;
+    }
+    .service .bar {
+      width: 54px;
+      height: 5px;
+      border-radius: 999px;
+      background: #f5682d;
+      margin-bottom: 18px;
+    }
+    .service:nth-child(2) .bar { background: #63b3e6; }
+    .service:nth-child(3) .bar { background: #ffffff; opacity: .85; }
+    .service h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .service p {
+      margin: 10px 0 0;
+      color: #cbd8e6;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    @media (max-width: 860px) {
+      main { padding: 0; }
+      .page { min-height: 100vh; border-radius: 0; }
+      .nav { padding: 0 20px; }
+      .links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 44px 22px 24px; }
+      .visual { min-height: 300px; }
+      .services { grid-template-columns: 1fr; padding: 0 22px 28px; }
+      .diagnostic { right: 0; left: 0; width: auto; }
+      .cube { right: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="page">
+      <nav class="nav">
+        <div class="logo">
+          <img src="file:///C:/Users/jpozo/Documents/Factos%20Solutions/Web%20con%20Claude%20Code/logo.png" alt="Factos Solutions">
+        </div>
+        <div class="links">
+          <span>Servicios</span>
+          <span>Procesos</span>
+          <span>Academia</span>
+          <span>Contacto</span>
+          <span class="nav-cta">Diagnostico</span>
+        </div>
+      </nav>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Consultoria en automatizacion e IA</div>
+          <h1>Procesos empresariales mas inteligentes</h1>
+          <p>Ayudamos a empresas y negocios en Peru a detectar tareas manuales, ordenar sus flujos y aplicar automatizacion e inteligencia artificial de forma practica.</p>
+          <div class="actions">
+            <span class="primary">Explorar servicios</span>
+            <span class="secondary">Ver diagnostico S/150</span>
+          </div>
+        </div>
+        <div class="visual" aria-hidden="true">
+          <div class="path"></div>
+          <div class="cube"></div>
+          <span class="node n1"></span>
+          <span class="node n2"></span>
+          <span class="node n3"></span>
+          <div class="diagnostic">
+            <small>Primer paso</small>
+            <strong>Mapa de oportunidades de automatizacion</strong>
+          </div>
+        </div>
+      </div>
+      <div class="services">
+        <article class="service">
+          <div class="bar"></div>
+          <h3>Consultoria IA</h3>
+          <p>Diagnostico, priorizacion y roadmap para aplicar tecnologia donde genera impacto.</p>
+        </article>
+        <article class="service">
+          <div class="bar"></div>
+          <h3>Automatizacion de procesos</h3>
+          <p>Flujos, integraciones, alertas y reportes para reducir trabajo repetitivo.</p>
+        </article>
+        <article class="service">
+          <div class="bar"></div>
+          <h3>Webs conectadas</h3>
+          <p>Paginas modernas integradas a formularios, CRM, agenda o procesos internos.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
