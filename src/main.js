@@ -103,6 +103,57 @@ document.documentElement.classList.add('js');
     });
   }
 
+  const calendarForm = document.querySelector('[data-calendar-form]');
+
+  if (calendarForm) {
+    calendarForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const dateInput = calendarForm.querySelector('input[name="meeting-time"]');
+
+      if (!dateInput || !dateInput.value) {
+        if (dateInput) {
+          dateInput.focus();
+        }
+        return;
+      }
+
+      const startDate = new Date(dateInput.value);
+
+      if (Number.isNaN(startDate.getTime())) {
+        dateInput.focus();
+        return;
+      }
+
+      const endDate = new Date(startDate.getTime() + 45 * 60 * 1000);
+      const formatCalendarDate = (date) => {
+        const pad = (value) => value.toString().padStart(2, '0');
+
+        return [
+          date.getFullYear(),
+          pad(date.getMonth() + 1),
+          pad(date.getDate()),
+          'T',
+          pad(date.getHours()),
+          pad(date.getMinutes()),
+          '00',
+        ].join('');
+      };
+
+      const params = new URLSearchParams({
+        action: 'TEMPLATE',
+        text: 'Diagnostico de procesos - Factos Solutions',
+        dates: `${formatCalendarDate(startDate)}/${formatCalendarDate(endDate)}`,
+        details: 'Reunion para conversar sobre oportunidades de automatizacion e IA para procesos empresariales.',
+        location: 'Reunion virtual',
+        add: 'hola@factossolutions.com',
+        ctz: 'America/Lima',
+      });
+
+      window.open(`https://calendar.google.com/calendar/render?${params.toString()}`, '_blank', 'noopener');
+    });
+  }
+
   const year = document.querySelector('#year');
 
   if (year) {

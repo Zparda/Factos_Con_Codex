@@ -109,7 +109,7 @@
         <div class="price-card">
           <span>Inversion</span>
           <strong>S/150</strong>
-          <a class="button button-primary" href="#contacto">Solicitar diagnostico</a>
+          <a class="button button-primary" href="https://wa.me/51918395774?text=Hola%20Factos%20Solutions%2C%20quiero%20solicitar%20el%20diagnostico%20de%20procesos%20de%20S%2F150." target="_blank" rel="noopener">Solicitar diagnostico</a>
         </div>
       </div>
       <ul class="diagnostic-list" data-reveal>
@@ -134,9 +134,21 @@
         <p class="eyebrow">Contacto</p>
         <h2>Empecemos identificando que procesos puedes automatizar primero</h2>
         <div class="contact-actions">
-          <a class="button button-primary" href="#diagnostico">Agendar diagnostico</a>
-          <a class="button button-secondary" href="https://wa.me/?text=Hola%20Factos%20Solutions%2C%20quiero%20consultar%20sobre%20automatizacion%20e%20IA%20para%20mi%20empresa." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <a class="button button-primary" href="#agenda-diagnostico">Agendar diagnostico</a>
+          <a class="button button-secondary" href="https://wa.me/51918395774?text=Hola%20Factos%20Solutions%2C%20quiero%20consultar%20sobre%20automatizacion%20e%20IA%20para%20mi%20empresa." target="_blank" rel="noopener">Escribir por WhatsApp</a>
         </div>
+        <form id="agenda-diagnostico" class="schedule-card" data-calendar-form>
+          <div>
+            <span>Agenda una reunion</span>
+            <strong>Elige fecha y hora para conversar sobre tu diagnostico.</strong>
+            <p>Se abrira Google Calendar con hola@factossolutions.com como invitado para recibir el aviso de la reunion.</p>
+          </div>
+          <label>
+            Fecha y hora
+            <input type="datetime-local" name="meeting-time" required>
+          </label>
+          <button class="button button-primary" type="submit">Crear evento en calendario</button>
+        </form>
       </div>
     </section>
   </main>
